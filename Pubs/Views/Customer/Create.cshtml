@@ -1,0 +1,25 @@
+﻿@model Customer
+@{
+    ViewData["Title"] = "Create Customer";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div asp-validation-summary="All" class="bg-danger text-white">
+            
+        </div>
+        <form asp-action="Create" method="post">
+            <div class="form-control mb-3">
+                <label class="form-label" asp-for="Name"></label>
+                <input class="form-control" asp-for="Name" />
+            </div>
+
+            <div class="form-control">
+                <label class="form-label" asp-for="EmailAddress"></label>
+                <input class="form-control" asp-for="EmailAddress" />
+            </div>
+            <input class="btn btn-outline-success mt-3" value="Create" type="submit"/>
+            
+        </form>
+    </div>
+</div>
